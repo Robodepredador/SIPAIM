@@ -1,0 +1,15 @@
+{
+  "name": "sipaaim-2026",
+  "version": "1.0.0",
+  "description": "Official website for SIPAIM 2026 Conference",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "npx live-server --port=3000",
+    "build": "echo 'No build step required for static site'"
+  },
+  "keywords": ["conference", "medical-imaging", "digital-health"],
+  "author": "",
+  "license": "ISC"
+}</content>
+<parameter name="filePath">c:\Users\LEGION\Desktop\GICC\SIPAIM\package.json
