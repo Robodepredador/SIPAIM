@@ -1,47 +1,76 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SIPAIM XXVII 2026 | USIL</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
+  <div class="bg-orb orb-1" aria-hidden="true"></div>
+  <div class="bg-orb orb-2" aria-hidden="true"></div>
+
   <nav class="navbar">
-    <a href="#inicio" class="logo">SIPAIM <span>2026</span></a>
+    <a href="#inicio" class="logo">SIPAIM <span>XXVII</span></a>
     <ul class="nav-links">
       <li><a href="#programa">Programa</a></li>
-      <li><a href="#panel">Panel</a></li>
+      <li><a href="#panel">Panelistas</a></li>
       <li><a href="#workshops">Workshops</a></li>
-      <li><a href="#cena">Cena</a></li>
+      <li><a href="#gastronomia">Comidas</a></li>
       <li><a href="#turismo">Turismo</a></li>
     </ul>
+    <a href="#cta" class="nav-cta">Registro</a>
   </nav>
 
   <header id="inicio" class="hero">
-    <p class="hero-badge">Universidad San Ignacio de Loyola · Noviembre 2026</p>
-    <h1>SIPAIM XXVII</h1>
-    <p class="hero-subtitle">Simposio en Procesamiento de Imágenes Médicas con jornadas académicas, talleres preconferencia y actividades de networking.</p>
-    <div class="hero-cta-wrap">
-      <a href="#programa" class="btn btn-primary">Ver programa</a>
-      <a href="#workshops" class="btn btn-secondary">Elegir workshop</a>
+    <div class="hero-content reveal">
+      <p class="hero-label">USIL · La Molina · 16 al 20 de noviembre de 2026</p>
+      <h1>Landing de alto impacto para <span>SIPAIM 2026</span></h1>
+      <p class="hero-subtitle">Un espacio diseñado para informar, emocionar y facilitar decisiones: programa claro, ponentes destacados, workshops interactivos y experiencias alrededor del evento.</p>
+      <div class="hero-actions">
+        <a href="#programa" class="btn btn-primary">Explorar agenda</a>
+        <a href="#panel" class="btn btn-ghost">Ver panelistas</a>
+      </div>
     </div>
+    <aside class="hero-float-card reveal">
+      <h3>¿Por qué esta versión convence?</h3>
+      <ul>
+        <li>Jerarquía visual orientada a conversión.</li>
+        <li>Interacciones con feedback inmediato.</li>
+        <li>Contenido accionable para asistentes.</li>
+      </ul>
+    </aside>
   </header>
 
-  <section class="stats-container" aria-label="Datos clave del evento">
-    <article class="stat-card"><h2>16–20</h2><p>Noviembre 2026</p></article>
-    <article class="stat-card"><h2>5</h2><p>Días de actividades</p></article>
-    <article class="stat-card"><h2>4</h2><p>Ponentes panel gobierno-salud</p></article>
-    <article class="stat-card"><h2>S/ 5.00</h2><p>Ticket estudiante (Pachacamac)</p></article>
+  <section class="metrics reveal" aria-label="Métricas del evento">
+    <article class="metric-card">
+      <h2>5</h2>
+      <p>Días de actividades</p>
+    </article>
+    <article class="metric-card">
+      <h2>4</h2>
+      <p>Panelistas gubernamentales</p>
+    </article>
+    <article class="metric-card">
+      <h2>2</h2>
+      <p>Rutas de workshops</p>
+    </article>
+    <article class="metric-card">
+      <h2>S/ 5</h2>
+      <p>Entrada estudiante Pachacamac</p>
+    </article>
   </section>
 
   <main>
-    <section id="programa" class="section">
-      <h2 class="section-title">Programa oficial resumido</h2>
-      <p class="section-intro">Agenda consolidada del archivo <em>SIPAIM_Program_2026</em> con los hitos principales de cada día.</p>
+    <section id="programa" class="section reveal">
+      <div class="section-head">
+        <p class="eyebrow">Agenda inteligente</p>
+        <h2>Programa oficial con lectura rápida</h2>
+        <p>Se estructura por día para reducir carga cognitiva: el usuario entiende qué pasa, cuándo y por qué le importa.</p>
+      </div>
 
       <div class="tabs-container" role="tablist" aria-label="Programa por día">
         <button class="tab-btn active" data-day="d1">Lun 16</button>
@@ -51,164 +80,175 @@
         <button class="tab-btn" data-day="d5">Vie 20</button>
       </div>
 
-      <div id="d1" class="day-content active">
-        <article class="agenda-item">
-          <h3>08:30 · LABI Workshop</h3>
-          <p>Sesión preconferencia de laboratorio y bienvenida.</p>
-        </article>
-        <article class="agenda-item">
-          <h3>10:00 · Coffee break</h3>
-          <p>Pausa de networking (referencia: PUCP en el cronograma de trabajo).</p>
-        </article>
-        <article class="agenda-item">
-          <h3>13:00 · Lunch</h3>
-          <p>Almuerzo para asistentes registrados.</p>
-        </article>
-        <article class="agenda-item">
-          <h3>15:00 · LABI Workshop (continuación)</h3>
-          <p>Bloque de tarde del taller técnico.</p>
-        </article>
+      <div class="day-content active" id="d1">
+        <article class="agenda-item"><button class="agenda-header">08:30 · LABI Workshop <span>Preconferencia</span></button><div class="agenda-body"><p>Inicio técnico con enfoque en laboratorio y puesta en contexto científico.</p></div></article>
+        <article class="agenda-item"><button class="agenda-header">10:00 · Coffee Break <span>Networking</span></button><div class="agenda-body"><p>Bloque para conocer investigadores y alinear colaboraciones.</p></div></article>
+        <article class="agenda-item"><button class="agenda-header">13:00 · Lunch <span>Comunidad</span></button><div class="agenda-body"><p>Almuerzo para fortalecer vínculos entre universidades y sector salud.</p></div></article>
       </div>
 
-      <div id="d2" class="day-content">
-        <article class="agenda-item">
-          <h3>08:30 · Pre-conference Workshop</h3>
-          <p>Opciones a definir por el board: NVIDIA, ACM SIGGRAPH o ambos.</p>
-        </article>
-        <article class="agenda-item">
-          <h3>10:00 · Coffee break</h3>
-          <p>Pausa intermedia de la mañana.</p>
-        </article>
-        <article class="agenda-item">
-          <h3>13:00 · Lunch</h3>
-          <p>Almuerzo oficial.</p>
-        </article>
-        <article class="agenda-item">
-          <h3>14:00 · Actividad turística opcional</h3>
-          <p>Salida a Pachacamac (buses y tickets por confirmar).</p>
-        </article>
+      <div class="day-content" id="d2">
+        <article class="agenda-item"><button class="agenda-header">08:30 · Pre-conference Workshop <span>Decisión board</span></button><div class="agenda-body"><p>Ruta NVIDIA, ACM SIGGRAPH o combinación de ambos tracks.</p></div></article>
+        <article class="agenda-item"><button class="agenda-header">14:00 · Salida turística opcional <span>Pachacamac</span></button><div class="agenda-body"><p>Activación cultural con transporte y tickets coordinados.</p></div></article>
       </div>
 
-      <div id="d3" class="day-content">
-        <article class="agenda-item"><h3>08:30 · Apertura del evento</h3><p>Inicio oficial de SIPAIM XXVII.</p></article>
-        <article class="agenda-item"><h3>09:00 · Keynote 1</h3><p>Conferencia magistral.</p></article>
-        <article class="agenda-item"><h3>10:00 · Coffee break (USIL)</h3><p>Espacio de networking.</p></article>
-        <article class="agenda-item"><h3>10:30–17:00 · Sesiones 1–10</h3><p>Bloques científicos distribuidos durante el día.</p></article>
+      <div class="day-content" id="d3">
+        <article class="agenda-item"><button class="agenda-header">08:30 · Apertura de SIPAIM XXVII <span>Inicio oficial</span></button><div class="agenda-body"><p>Bienvenida institucional y presentación de objetivos estratégicos.</p></div></article>
+        <article class="agenda-item"><button class="agenda-header">09:00 · Keynote 1 <span>Conferencia magistral</span></button><div class="agenda-body"><p>Primer keynote del bloque académico central.</p></div></article>
+        <article class="agenda-item"><button class="agenda-header">10:30–17:00 · Sesiones 1 al 10 <span>Investigación</span></button><div class="agenda-body"><p>Presentaciones técnicas y discusión por líneas temáticas.</p></div></article>
       </div>
 
-      <div id="d4" class="day-content">
-        <article class="agenda-item"><h3>09:00 · Keynote 2</h3><p>Conferencia magistral.</p></article>
-        <article class="agenda-item"><h3>10:30–17:30 · Sesiones 11–18</h3><p>Sesiones temáticas y posters.</p></article>
-        <article class="agenda-item"><h3>14:00 · Keynote 3</h3><p>Conferencia de la tarde.</p></article>
+      <div class="day-content" id="d4">
+        <article class="agenda-item"><button class="agenda-header">09:00 · Keynote 2 <span>Visión de futuro</span></button><div class="agenda-body"><p>Ponencia orientada a tendencias en salud digital y análisis de imágenes.</p></div></article>
+        <article class="agenda-item"><button class="agenda-header">14:00 · Keynote 3 <span>Innovación aplicada</span></button><div class="agenda-body"><p>Conferencia de tarde + sesiones 11 al 18 y poster session.</p></div></article>
       </div>
 
-      <div id="d5" class="day-content">
-        <article class="agenda-item"><h3>09:00 · Keynote 4</h3><p>Conferencia magistral de cierre académico.</p></article>
-        <article class="agenda-item"><h3>12:30 · Panel Gobierno + Salud</h3><p>Panel sobre adopción de tecnologías para el sector salud a nivel gubernamental.</p></article>
-        <article class="agenda-item"><h3>13:30 · Premiación y clausura</h3><p>Cierre institucional del evento.</p></article>
-        <article class="agenda-item"><h3>15:30 · Visita Centro Histórico de Lima</h3><p>Actividad turística con evaluación de guía bilingüe inglés-español.</p></article>
+      <div class="day-content" id="d5">
+        <article class="agenda-item"><button class="agenda-header">09:00 · Keynote 4 <span>Cierre académico</span></button><div class="agenda-body"><p>Último keynote para consolidar aprendizajes y retos regionales.</p></div></article>
+        <article class="agenda-item"><button class="agenda-header">12:30 · Panel Gobierno + Salud <span>Tomadores de decisión</span></button><div class="agenda-body"><p>Debate sobre adopción tecnológica en el sector público.</p></div></article>
+        <article class="agenda-item"><button class="agenda-header">13:30 · Premiación y clausura <span>Reconocimiento</span></button><div class="agenda-body"><p>Cierre institucional y anuncio de próximos pasos.</p></div></article>
       </div>
     </section>
-
-    <section id="panel" class="section section-alt">
-      <h2 class="section-title">Panel: adopción tecnológica en salud</h2>
-      <p class="section-intro">Perfiles preliminares considerados para la mesa de diálogo del viernes 20 de noviembre.</p>
+     <section id="panel" class="section reveal">
+      <div class="section-head">
+        <p class="eyebrow">Credibilidad del evento</p>
+        <h2>Panelistas presentados como “tarjetas de autoridad”</h2>
+        <p>En lugar de listar nombres, se comunica impacto: rol, línea de aporte y acceso rápido a perfil.</p>
+      </div>
 
       <div class="speaker-grid">
-        <article class="speaker-card">
+        <article class="speaker-card interactive-card">
+          <div class="speaker-avatar">GG</div>
           <h3>Dr. Gustavo Gonzáles</h3>
           <p>Past-president de la Academia Peruana de Medicina.</p>
-          <a href="https://ciencias.cayetano.edu.pe/noticias/dr-gustavo-gonzales-asumio-la-presidencia-de-la-junta-directiva-de-la-academia-nacional-de-medicina-del-peru/" target="_blank" rel="noopener noreferrer">Ver perfil</a>
+          <a href="https://ciencias.cayetano.edu.pe/noticias/dr-gustavo-gonzales-asumio-la-presidencia-de-la-junta-directiva-de-la-academia-nacional-de-medicina-del-peru/" target="_blank" rel="noopener noreferrer">Perfil académico</a>
         </article>
-        <article class="speaker-card">
+        <article class="speaker-card interactive-card">
+          <div class="speaker-avatar">BB</div>
           <h3>Dr. Brady Beltrán</h3>
           <p>Investigador oncólogo del Hospital Rebagliati.</p>
-          <a href="https://scholar.google.com/citations?user=7FcsgKMAAAAJ&hl=es" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+          <a href="https://scholar.google.com/citations?user=7FcsgKMAAAAJ&hl=es" target="_blank" rel="noopener noreferrer">Producción científica</a>
         </article>
-        <article class="speaker-card">
+        <article class="speaker-card interactive-card">
+          <div class="speaker-avatar">MZ</div>
           <h3>Dr. Mirko Zimic</h3>
           <p>Vicerrector de Investigación de la UPCH.</p>
-          <a href="https://www.facebook.com/farvet/posts/felicitamos-al-dr-mirko-zimic-por-su-elecci%C3%B3n-como-vicerrector-de-la-universidad/1460750675841133/" target="_blank" rel="noopener noreferrer">Ver referencia</a>
+          <a href="https://www.facebook.com/farvet/posts/felicitamos-al-dr-mirko-zimic-por-su-elecci%C3%B3n-como-vicerrector-de-la-universidad/1460750675841133/" target="_blank" rel="noopener noreferrer">Referencia institucional</a>
         </article>
-        <article class="speaker-card">
+        <article class="speaker-card interactive-card">
+          <div class="speaker-avatar">KM</div>
           <h3>Dra. Karina Maldonado</h3>
           <p>Subdirectora de Transferencia Tecnológica e Innovación de CONCYTEC.</p>
-          <a href="https://www.gob.pe/institucion/concytec/funcionarios/175571-karina-maldonado-carbajal" target="_blank" rel="noopener noreferrer">Perfil institucional</a>
+          <a href="https://www.gob.pe/institucion/concytec/funcionarios/175571-karina-maldonado-carbajal" target="_blank" rel="noopener noreferrer">Perfil oficial</a>
         </article>
       </div>
     </section>
+     <section id="workshops" class="section reveal">
+      <div class="section-head">
+        <p class="eyebrow">Decisión guiada</p>
+        <h2>Workshops con interacción y feedback inmediato</h2>
+        <p>Aplicamos principio de visibilidad del estado: el usuario sabe en todo momento qué eligió.</p>
+      </div>
 
-    <section id="workshops" class="section">
-      <h2 class="section-title">Pre-conference workshop (selección del board)</h2>
-      <p class="section-intro">Según el documento “Léeme”, el board debe elegir NVIDIA, ACM SIGGRAPH o ambos.</p>
-
-      <div class="ws-container">
-        <article class="ws-box" id="ws-nv" data-workshop="nv" tabindex="0">
-          <span class="pill">NVIDIA DLI</span>
+      <div class="ws-grid">
+        <article class="ws-box interactive-card" data-workshop="nv" tabindex="0">
+          <span class="chip">NVIDIA DLI</span>
           <h3>Generative AI with Diffusion Models</h3>
-          <p>Workshop guiado por instructor. Beneficios reportados: acceso valorizado en $500 y certificado oficial.</p>
-          <a href="https://www.nvidia.com/en-gb/training/instructor-led-workshops/generative-ai-with-diffusion-models/" target="_blank" rel="noopener noreferrer">Ver detalle NVIDIA</a>
+          <p>Acceso a workshop valorizado en USD 500 + certificado oficial.</p>
+          <a href="https://www.nvidia.com/en-gb/training/instructor-led-workshops/generative-ai-with-diffusion-models/" target="_blank" rel="noopener noreferrer">Ver syllabus</a>
         </article>
-
-        <article class="ws-box" id="ws-acm" data-workshop="acm" tabindex="0">
-          <span class="pill">ACM SIGGRAPH Perú</span>
+        <article class="ws-box interactive-card" data-workshop="acm" tabindex="0">
+          <span class="chip">ACM SIGGRAPH Perú</span>
           <h3>Explorando imágenes médicas con DICOM</h3>
-          <p>Introducción práctica con Python. Ponente: Luis Valdivia Humareda.</p>
+          <p>Taller práctico con Python y construcción de visor básico.</p>
         </article>
       </div>
 
-      <div class="reg-summary">
-        <h3>Resumen de decisión</h3>
-        <p id="sum-text">No has seleccionado talleres aún.</p>
-        <button id="btn-reg" class="btn-confirm" disabled>Confirmar selección al board</button>
+      <div class="ws-summary" id="ws-summary">
+        <h3>Estado de la selección</h3>
+        <p id="sum-text">No hay workshops seleccionados.</p>
+        <button id="btn-reg" disabled>Confirmar para comité</button>
       </div>
     </section>
+    <section id="gastronomia" class="section reveal">
+      <div class="section-head">
+        <p class="eyebrow">Experiencia fuera de sala</p>
+        <h2>Recomendaciones para comer cerca de USIL La Molina</h2>
+        <p>Para coordinadores y visitantes: opciones sugeridas por cercanía práctica y variedad gastronómica (verificar disponibilidad al momento de reservar).</p>
+      </div>
 
-    <section id="cena" class="section section-alt">
-      <h2 class="section-title">SIPAIM Dinner Reception</h2>
-      <p class="section-intro">Opciones de restaurante evaluadas para la cena de recepción del viernes 20 de noviembre.</p>
-
-      <article class="dinner-card">
-        <h3>Huaca Pucllana (candidato registrado)</h3>
-        <ul>
-          <li><strong>Distrito:</strong> Miraflores.</li>
-          <li><strong>Dirección:</strong> General Borgoño Cdra 8, Huaca Pucllana.</li>
-          <li><strong>Capacidad:</strong> 20–50 personas.</li>
-          <li><strong>Contacto:</strong> reservas@resthuacapucllana.com · (01) 445-4042 / 994-005-266.</li>
-          <li><strong>Nota:</strong> el documento indica que es un presupuesto y no una reserva confirmada.</li>
-        </ul>
-      </article>
+      <div class="food-grid">
+        <article class="food-card interactive-card">
+          <h3>Antica La Molina</h3>
+          <p class="food-type">Cocina italiana · reuniones pequeñas</p>
+          <p>Buena alternativa para cenas de networking con ambiente tranquilo y servicio de mesa.</p>
+          <a href="https://anticalamolina.com/" target="_blank" rel="noopener noreferrer">Sitio del restaurante</a>
+        </article>
+        <article class="food-card interactive-card">
+          <h3>El Hornero (La Molina)</h3>
+          <p class="food-type">Parrillas · grupos medianos</p>
+          <p>Recomendado para delegaciones que buscan una experiencia peruana clásica de carnes.</p>
+          <a href="https://elhornero.com.pe/" target="_blank" rel="noopener noreferrer">Ver locales</a>
+        </article>
+        <article class="food-card interactive-card">
+          <h3>Zona Jockey Plaza</h3>
+          <p class="food-type">Opciones múltiples · logística simple</p>
+          <p>Ideal para asistentes internacionales por variedad de restaurantes en un mismo punto.</p>
+          <a href="https://jockeyplaza.com.pe/" target="_blank" rel="noopener noreferrer">Explorar opciones</a>
+        </article>
+        <article class="food-card interactive-card">
+          <h3>Parque La Molina</h3>
+          <p class="food-type">Formato casual · after event</p>
+          <p>Alternativa flexible para reuniones informales o cierres de jornada.</p>
+          <a href="https://www.parquelamolina.com/gastronomia" target="_blank" rel="noopener noreferrer">Directorio gastronómico</a>
+        </article>
+      </div>
     </section>
+    <section id="turismo" class="section reveal">
+      <div class="section-head">
+        <p class="eyebrow">Actividad cultural</p>
+        <h2>Visita a Pachacamac con formato visual tipo “ficha de viaje”</h2>
+      </div>
 
-    <section id="turismo" class="section">
-      <h2 class="section-title">Actividad turística: Museo de Sitio Pachacamac</h2>
-      <div class="turismo-box">
-        <div>
-          <h3>Horarios</h3>
+      <div class="tour-layout">
+        <article class="tour-card highlight">
+          <h3>Datos rápidos</h3>
           <ul>
             <li><strong>Lunes:</strong> cerrado.</li>
-            <li><strong>Martes a sábado:</strong> 9:00 a. m. a 5:00 p. m. (venta hasta 4:30 p. m.).</li>
-            <li><strong>Domingo:</strong> 9:00 a. m. a 4:00 p. m. (venta hasta 3:30 p. m.).</li>
+            <li><strong>Mar–Sáb:</strong> 9:00 a. m. – 5:00 p. m. (boletería hasta 4:30 p. m.).</li>
+            <li><strong>Domingo:</strong> 9:00 a. m. – 4:00 p. m. (boletería hasta 3:30 p. m.).</li>
+            <li><strong>Duración de guiado:</strong> ~1 h 30 min.</li>
           </ul>
-        </div>
+        </article>
 
-        <div>
-          <h3>Tarifas de referencia</h3>
-          <table>
-            <tr><td>Adulto general</td><td>S/ 15.00</td></tr>
-            <tr><td>Niños y adolescentes (3–17)</td><td>S/ 1.00</td></tr>
-            <tr><td>Estudiante superior con carné</td><td>S/ 5.00</td></tr>
-            <tr><td>Ruta de peregrinos</td><td>S/ 20.00</td></tr>
-            <tr><td>Guía por grupo (15–20 personas)</td><td>S/ 50.00</td></tr>
-          </table>
-          <p class="small-note">La guía tiene costo separado de la entrada y está sujeta a disponibilidad.</p>
-        </div>
+        <article class="tour-card pricing">
+          <h3>Tarifas</h3>
+          <div class="price-line"><span>Adulto general</span><strong>S/ 15.00</strong></div>
+          <div class="price-line"><span>Niños (3–17)</span><strong>S/ 1.00</strong></div>
+          <div class="price-line"><span>Estudiante superior (con carné)</span><strong>S/ 5.00</strong></div>
+          <div class="price-line"><span>Ruta de peregrinos</span><strong>S/ 20.00</strong></div>
+          <div class="price-line"><span>Guía por grupo (15–20 personas)</span><strong>S/ 50.00</strong></div>
+          <p class="note">El guiado se paga por separado y está sujeto a disponibilidad.</p>
+        </article>
+
+        <article class="tour-card checklist">
+          <h3>Checklist para coordinación</h3>
+          <ol>
+            <li>Confirmar número final de asistentes.</li>
+            <li>Reservar guía con anticipación.</li>
+            <li>Definir punto de salida de buses desde USIL.</li>
+            <li>Enviar recordatorio de carné universitario a estudiantes.</li>
+          </ol>
+        </article>
       </div>
     </section>
+    <section id="cta" class="section cta reveal">
+      <h2>¿Listos para presentar esta propuesta al comité?</h2>
+      <p>La landing está optimizada para difusión: comunica valor, ordena información y mejora la percepción del evento frente a asistentes y aliados.</p>
+      <a class="btn btn-primary" href="#inicio">Volver al inicio</a>
+    </section>
   </main>
-
-  <footer>
-    <p>© 2026 SIPAIM · USIL · Información sujeta a actualización del comité organizador.</p>
+   <footer>
+    <p>© 2026 SIPAIM · USIL · Versión de landing orientada a experiencia de usuario (IHC).</p>
   </footer>
 
   <script src="index.js"></script>

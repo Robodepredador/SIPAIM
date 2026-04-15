@@ -1,19 +1,26 @@
 const tabs = document.querySelectorAll('.tab-btn');
-const days = document.querySelectorAll('.day-content');
+const dayPanels = document.querySelectorAll('.day-content');
 
 for (const tab of tabs) {
   tab.addEventListener('click', () => {
     const dayId = tab.dataset.day;
 
-    tabs.forEach((button) => button.classList.remove('active'));
-    days.forEach((panel) => panel.classList.remove('active'));
+    tabs.forEach((item) => item.classList.remove('active'));
+    dayPanels.forEach((panel) => panel.classList.remove('active'));
 
     tab.classList.add('active');
     document.getElementById(dayId).classList.add('active');
   });
 }
 
-const selectedWorkshops = {
+document.querySelectorAll('.agenda-header').forEach((header) => {
+  header.addEventListener('click', () => {
+    const item = header.closest('.agenda-item');
+    item.classList.toggle('open');
+  });
+});
+
+const selected = {
   nv: false,
   acm: false,
 };
@@ -21,41 +28,55 @@ const selectedWorkshops = {
 const summaryText = document.getElementById('sum-text');
 const confirmButton = document.getElementById('btn-reg');
 
-function renderWorkshopSummary() {
-  const labels = [];
+function updateWorkshopSummary() {
+  const options = [];
 
-  if (selectedWorkshops.nv) labels.push('NVIDIA DLI');
-  if (selectedWorkshops.acm) labels.push('ACM SIGGRAPH Perú');
+  if (selected.nv) options.push('NVIDIA DLI');
+  if (selected.acm) options.push('ACM SIGGRAPH Perú');
 
-  if (labels.length === 0) {
-    summaryText.textContent = 'No has seleccionado talleres aún.';
+  if (options.length === 0) {
+    summaryText.textContent = 'No hay workshops seleccionados.';
     confirmButton.disabled = true;
     confirmButton.classList.remove('enabled');
     return;
   }
 
-  summaryText.innerHTML = `Seleccionado: <strong>${labels.join(' + ')}</strong>`;
+  summaryText.innerHTML = `Seleccionado: <strong>${options.join(' + ')}</strong>`;
   confirmButton.disabled = false;
   confirmButton.classList.add('enabled');
 }
 
-function toggleWorkshopCard(card) {
-  const workshopId = card.dataset.workshop;
-  selectedWorkshops[workshopId] = !selectedWorkshops[workshopId];
-  card.classList.toggle('selected');
-  renderWorkshopSummary();
-}
-
 document.querySelectorAll('.ws-box').forEach((card) => {
-  card.addEventListener('click', () => toggleWorkshopCard(card));
+  const toggle = () => {
+    const id = card.dataset.workshop;
+    selected[id] = !selected[id];
+    card.classList.toggle('selected');
+    updateWorkshopSummary();
+  };
+
+  card.addEventListener('click', toggle);
   card.addEventListener('keypress', (event) => {
     if (event.key === 'Enter' || event.key === ' ') {
       event.preventDefault();
-      toggleWorkshopCard(card);
+      toggle();
     }
   });
 });
 
 confirmButton.addEventListener('click', () => {
-  alert('Selección registrada para revisión del board.');
+  alert('Selección registrada para revisión del comité organizador.');
 });
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.16 }
+);
+
+document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
