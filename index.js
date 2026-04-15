@@ -1,27 +1,82 @@
-// Lógica de Días
-        function showDay(id) {
-            document.querySelectorAll('.day-content').forEach(d => d.classList.remove('active'));
-            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-            document.getElementById(id).classList.add('active');
-            event.currentTarget.classList.add('active');
-        }
+const tabs = document.querySelectorAll('.tab-btn');
+const dayPanels = document.querySelectorAll('.day-content');
 
-        // Lógica de Selección
-        let s = { nv: false, acm: false };
-        function toggleWS(id) {
-            s[id] = !s[id];
-            document.getElementById('ws-'+id).classList.toggle('selected');
-            const btn = document.getElementById('btn-reg');
-            const txt = document.getElementById('sum-text');
-            let list = [];
-            if(s.nv) list.push("NVIDIA");
-            if(s.acm) list.push("ACM SIGGRAPH");
+for (const tab of tabs) {
+  tab.addEventListener('click', () => {
+    const dayId = tab.dataset.day;
 
-            if(list.length > 0) {
-                txt.innerHTML = "Seleccionado: <strong>" + list.join(" y ") + "</strong>";
-                btn.classList.add('enabled'); btn.disabled = false;
-            } else {
-                txt.innerText = "No has seleccionado talleres aún.";
-                btn.classList.remove('enabled'); btn.disabled = true;
-            }
-        }
+    tabs.forEach((item) => item.classList.remove('active'));
+    dayPanels.forEach((panel) => panel.classList.remove('active'));
+
+    tab.classList.add('active');
+    document.getElementById(dayId).classList.add('active');
+  });
+}
+
+document.querySelectorAll('.agenda-header').forEach((header) => {
+  header.addEventListener('click', () => {
+    const item = header.closest('.agenda-item');
+    item.classList.toggle('open');
+  });
+});
+
+const selected = {
+  nv: false,
+  acm: false,
+};
+
+const summaryText = document.getElementById('sum-text');
+const confirmButton = document.getElementById('btn-reg');
+
+function updateWorkshopSummary() {
+  const options = [];
+
+  if (selected.nv) options.push('NVIDIA DLI');
+  if (selected.acm) options.push('ACM SIGGRAPH Perú');
+
+  if (options.length === 0) {
+    summaryText.textContent = 'No hay workshops seleccionados.';
+    confirmButton.disabled = true;
+    confirmButton.classList.remove('enabled');
+    return;
+  }
+
+  summaryText.innerHTML = `Seleccionado: <strong>${options.join(' + ')}</strong>`;
+  confirmButton.disabled = false;
+  confirmButton.classList.add('enabled');
+}
+
+document.querySelectorAll('.ws-box').forEach((card) => {
+  const toggle = () => {
+    const id = card.dataset.workshop;
+    selected[id] = !selected[id];
+    card.classList.toggle('selected');
+    updateWorkshopSummary();
+  };
+
+  card.addEventListener('click', toggle);
+  card.addEventListener('keypress', (event) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      toggle();
+    }
+  });
+});
+
+confirmButton.addEventListener('click', () => {
+  alert('Selección registrada para revisión del comité organizador.');
+});
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.16 }
+);
+
+document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
