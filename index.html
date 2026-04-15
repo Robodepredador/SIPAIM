@@ -1,304 +1,216 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- ================== META Y CONFIGURACIÓN ================== -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SIPAIM 2026 | Congreso Oficial</title>
-
-    <!-- ================== FUENTES Y ESTILOS ================== -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="index.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIPAIM XXVII 2026 | USIL</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
 </head>
-
 <body>
+  <nav class="navbar">
+    <a href="#inicio" class="logo">SIPAIM <span>2026</span></a>
+    <ul class="nav-links">
+      <li><a href="#programa">Programa</a></li>
+      <li><a href="#panel">Panel</a></li>
+      <li><a href="#workshops">Workshops</a></li>
+      <li><a href="#cena">Cena</a></li>
+      <li><a href="#turismo">Turismo</a></li>
+    </ul>
+  </nav>
 
-    <!-- ================== NAVBAR ================== -->
-    <nav class="navbar">
-        <div class="logo">SIPAIM <span>2026</span></div>
-        <ul class="nav-links">
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#programa">Cronograma</a></li>
-            <li><a href="#ponentes">Ponentes</a></li>
-            <li><a href="#workshops">Workshops</a></li>
-            <li><a href="#turismo">Turismo</a></li>
+  <header id="inicio" class="hero">
+    <p class="hero-badge">Universidad San Ignacio de Loyola · Noviembre 2026</p>
+    <h1>SIPAIM XXVII</h1>
+    <p class="hero-subtitle">Simposio en Procesamiento de Imágenes Médicas con jornadas académicas, talleres preconferencia y actividades de networking.</p>
+    <div class="hero-cta-wrap">
+      <a href="#programa" class="btn btn-primary">Ver programa</a>
+      <a href="#workshops" class="btn btn-secondary">Elegir workshop</a>
+    </div>
+  </header>
+
+  <section class="stats-container" aria-label="Datos clave del evento">
+    <article class="stat-card"><h2>16–20</h2><p>Noviembre 2026</p></article>
+    <article class="stat-card"><h2>5</h2><p>Días de actividades</p></article>
+    <article class="stat-card"><h2>4</h2><p>Ponentes panel gobierno-salud</p></article>
+    <article class="stat-card"><h2>S/ 5.00</h2><p>Ticket estudiante (Pachacamac)</p></article>
+  </section>
+
+  <main>
+    <section id="programa" class="section">
+      <h2 class="section-title">Programa oficial resumido</h2>
+      <p class="section-intro">Agenda consolidada del archivo <em>SIPAIM_Program_2026</em> con los hitos principales de cada día.</p>
+
+      <div class="tabs-container" role="tablist" aria-label="Programa por día">
+        <button class="tab-btn active" data-day="d1">Lun 16</button>
+        <button class="tab-btn" data-day="d2">Mar 17</button>
+        <button class="tab-btn" data-day="d3">Mié 18</button>
+        <button class="tab-btn" data-day="d4">Jue 19</button>
+        <button class="tab-btn" data-day="d5">Vie 20</button>
+      </div>
+
+      <div id="d1" class="day-content active">
+        <article class="agenda-item">
+          <h3>08:30 · LABI Workshop</h3>
+          <p>Sesión preconferencia de laboratorio y bienvenida.</p>
+        </article>
+        <article class="agenda-item">
+          <h3>10:00 · Coffee break</h3>
+          <p>Pausa de networking (referencia: PUCP en el cronograma de trabajo).</p>
+        </article>
+        <article class="agenda-item">
+          <h3>13:00 · Lunch</h3>
+          <p>Almuerzo para asistentes registrados.</p>
+        </article>
+        <article class="agenda-item">
+          <h3>15:00 · LABI Workshop (continuación)</h3>
+          <p>Bloque de tarde del taller técnico.</p>
+        </article>
+      </div>
+
+      <div id="d2" class="day-content">
+        <article class="agenda-item">
+          <h3>08:30 · Pre-conference Workshop</h3>
+          <p>Opciones a definir por el board: NVIDIA, ACM SIGGRAPH o ambos.</p>
+        </article>
+        <article class="agenda-item">
+          <h3>10:00 · Coffee break</h3>
+          <p>Pausa intermedia de la mañana.</p>
+        </article>
+        <article class="agenda-item">
+          <h3>13:00 · Lunch</h3>
+          <p>Almuerzo oficial.</p>
+        </article>
+        <article class="agenda-item">
+          <h3>14:00 · Actividad turística opcional</h3>
+          <p>Salida a Pachacamac (buses y tickets por confirmar).</p>
+        </article>
+      </div>
+
+      <div id="d3" class="day-content">
+        <article class="agenda-item"><h3>08:30 · Apertura del evento</h3><p>Inicio oficial de SIPAIM XXVII.</p></article>
+        <article class="agenda-item"><h3>09:00 · Keynote 1</h3><p>Conferencia magistral.</p></article>
+        <article class="agenda-item"><h3>10:00 · Coffee break (USIL)</h3><p>Espacio de networking.</p></article>
+        <article class="agenda-item"><h3>10:30–17:00 · Sesiones 1–10</h3><p>Bloques científicos distribuidos durante el día.</p></article>
+      </div>
+
+      <div id="d4" class="day-content">
+        <article class="agenda-item"><h3>09:00 · Keynote 2</h3><p>Conferencia magistral.</p></article>
+        <article class="agenda-item"><h3>10:30–17:30 · Sesiones 11–18</h3><p>Sesiones temáticas y posters.</p></article>
+        <article class="agenda-item"><h3>14:00 · Keynote 3</h3><p>Conferencia de la tarde.</p></article>
+      </div>
+
+      <div id="d5" class="day-content">
+        <article class="agenda-item"><h3>09:00 · Keynote 4</h3><p>Conferencia magistral de cierre académico.</p></article>
+        <article class="agenda-item"><h3>12:30 · Panel Gobierno + Salud</h3><p>Panel sobre adopción de tecnologías para el sector salud a nivel gubernamental.</p></article>
+        <article class="agenda-item"><h3>13:30 · Premiación y clausura</h3><p>Cierre institucional del evento.</p></article>
+        <article class="agenda-item"><h3>15:30 · Visita Centro Histórico de Lima</h3><p>Actividad turística con evaluación de guía bilingüe inglés-español.</p></article>
+      </div>
+    </section>
+
+    <section id="panel" class="section section-alt">
+      <h2 class="section-title">Panel: adopción tecnológica en salud</h2>
+      <p class="section-intro">Perfiles preliminares considerados para la mesa de diálogo del viernes 20 de noviembre.</p>
+
+      <div class="speaker-grid">
+        <article class="speaker-card">
+          <h3>Dr. Gustavo Gonzáles</h3>
+          <p>Past-president de la Academia Peruana de Medicina.</p>
+          <a href="https://ciencias.cayetano.edu.pe/noticias/dr-gustavo-gonzales-asumio-la-presidencia-de-la-junta-directiva-de-la-academia-nacional-de-medicina-del-peru/" target="_blank" rel="noopener noreferrer">Ver perfil</a>
+        </article>
+        <article class="speaker-card">
+          <h3>Dr. Brady Beltrán</h3>
+          <p>Investigador oncólogo del Hospital Rebagliati.</p>
+          <a href="https://scholar.google.com/citations?user=7FcsgKMAAAAJ&hl=es" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+        </article>
+        <article class="speaker-card">
+          <h3>Dr. Mirko Zimic</h3>
+          <p>Vicerrector de Investigación de la UPCH.</p>
+          <a href="https://www.facebook.com/farvet/posts/felicitamos-al-dr-mirko-zimic-por-su-elecci%C3%B3n-como-vicerrector-de-la-universidad/1460750675841133/" target="_blank" rel="noopener noreferrer">Ver referencia</a>
+        </article>
+        <article class="speaker-card">
+          <h3>Dra. Karina Maldonado</h3>
+          <p>Subdirectora de Transferencia Tecnológica e Innovación de CONCYTEC.</p>
+          <a href="https://www.gob.pe/institucion/concytec/funcionarios/175571-karina-maldonado-carbajal" target="_blank" rel="noopener noreferrer">Perfil institucional</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="workshops" class="section">
+      <h2 class="section-title">Pre-conference workshop (selección del board)</h2>
+      <p class="section-intro">Según el documento “Léeme”, el board debe elegir NVIDIA, ACM SIGGRAPH o ambos.</p>
+
+      <div class="ws-container">
+        <article class="ws-box" id="ws-nv" data-workshop="nv" tabindex="0">
+          <span class="pill">NVIDIA DLI</span>
+          <h3>Generative AI with Diffusion Models</h3>
+          <p>Workshop guiado por instructor. Beneficios reportados: acceso valorizado en $500 y certificado oficial.</p>
+          <a href="https://www.nvidia.com/en-gb/training/instructor-led-workshops/generative-ai-with-diffusion-models/" target="_blank" rel="noopener noreferrer">Ver detalle NVIDIA</a>
+        </article>
+
+        <article class="ws-box" id="ws-acm" data-workshop="acm" tabindex="0">
+          <span class="pill">ACM SIGGRAPH Perú</span>
+          <h3>Explorando imágenes médicas con DICOM</h3>
+          <p>Introducción práctica con Python. Ponente: Luis Valdivia Humareda.</p>
+        </article>
+      </div>
+
+      <div class="reg-summary">
+        <h3>Resumen de decisión</h3>
+        <p id="sum-text">No has seleccionado talleres aún.</p>
+        <button id="btn-reg" class="btn-confirm" disabled>Confirmar selección al board</button>
+      </div>
+    </section>
+
+    <section id="cena" class="section section-alt">
+      <h2 class="section-title">SIPAIM Dinner Reception</h2>
+      <p class="section-intro">Opciones de restaurante evaluadas para la cena de recepción del viernes 20 de noviembre.</p>
+
+      <article class="dinner-card">
+        <h3>Huaca Pucllana (candidato registrado)</h3>
+        <ul>
+          <li><strong>Distrito:</strong> Miraflores.</li>
+          <li><strong>Dirección:</strong> General Borgoño Cdra 8, Huaca Pucllana.</li>
+          <li><strong>Capacidad:</strong> 20–50 personas.</li>
+          <li><strong>Contacto:</strong> reservas@resthuacapucllana.com · (01) 445-4042 / 994-005-266.</li>
+          <li><strong>Nota:</strong> el documento indica que es un presupuesto y no una reserva confirmada.</li>
         </ul>
-    </nav>
-
-    <!-- ================== HERO / PORTADA ================== -->
-    <header class="hero" id="inicio">
-        <h1>SIPAIM XXVII</h1>
-        <p>Procesamiento de Imágenes y Salud Digital | Noviembre 2026</p>
-    </header>
-
-    <!-- ================== ESTADÍSTICAS ================== -->
-    <section class="stats-container">
-        <div class="stat-card"><h2>05</h2><p>Días de Evento</p></div>
-        <div class="stat-card"><h2>20+</h2><p>Actividades</p></div>
-        <div class="stat-card"><h2>04</h2><p>Doctores VIP</p></div>
-        <div class="stat-card"><h2>S/ 5</h2><p>Ticket Estudiante</p></div>
+      </article>
     </section>
 
-    <!-- ================== PROGRAMA / CRONOGRAMA ================== -->
-    <section class="section" id="programa">
-        <h2 class="section-title">Programa Oficial</h2>
-        
-        <!-- Tabs de días -->
-        <div class="tabs-container">
-            <button class="tab-btn active" onclick="showDay('d1')">Lun 16</button>
-            <button class="tab-btn" onclick="showDay('d2')">Mar 17</button>
-            <button class="tab-btn" onclick="showDay('d3')">Mié 18</button>
-            <button class="tab-btn" onclick="showDay('d4')">Jue 19</button>
-            <button class="tab-btn" onclick="showDay('d5')">Vie 20</button>
+    <section id="turismo" class="section">
+      <h2 class="section-title">Actividad turística: Museo de Sitio Pachacamac</h2>
+      <div class="turismo-box">
+        <div>
+          <h3>Horarios</h3>
+          <ul>
+            <li><strong>Lunes:</strong> cerrado.</li>
+            <li><strong>Martes a sábado:</strong> 9:00 a. m. a 5:00 p. m. (venta hasta 4:30 p. m.).</li>
+            <li><strong>Domingo:</strong> 9:00 a. m. a 4:00 p. m. (venta hasta 3:30 p. m.).</li>
+          </ul>
         </div>
 
-        <!-- Día 1 -->
-        <div id="d1" class="day-content active">
-            <div class="agenda-item" onclick="this.classList.toggle('open')">
-                <div class="agenda-header">
-                    <span class="time">08:30 AM</span>
-                    <span class="title">LABI Workshop</span>
-                    <span class="icon-arrow">▼</span>
-                </div>
-                <div class="agenda-body">
-                    <div class="details-grid">
-                        <div>
-                            <span class="detail-label">Descripción</span>
-                            <p>Taller especializado en bioingeniería y señales médicas.</p>
-                        </div>
-                        <div>
-                            <span class="detail-label">Ubicación</span>
-                            <p>Laboratorio de Ingeniería (PUCP)</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="agenda-item" onclick="this.classList.toggle('open')">
-                <div class="agenda-header">
-                    <span class="time">01:00 PM</span>
-                    <span class="title">Networking Lunch</span>
-                    <span class="icon-arrow">▼</span>
-                </div>
-                <div class="agenda-body">
-                    <p>Almuerzo de bienvenida para todos los participantes registrados.</p>
-                </div>
-            </div>
+        <div>
+          <h3>Tarifas de referencia</h3>
+          <table>
+            <tr><td>Adulto general</td><td>S/ 15.00</td></tr>
+            <tr><td>Niños y adolescentes (3–17)</td><td>S/ 1.00</td></tr>
+            <tr><td>Estudiante superior con carné</td><td>S/ 5.00</td></tr>
+            <tr><td>Ruta de peregrinos</td><td>S/ 20.00</td></tr>
+            <tr><td>Guía por grupo (15–20 personas)</td><td>S/ 50.00</td></tr>
+          </table>
+          <p class="small-note">La guía tiene costo separado de la entrada y está sujeta a disponibilidad.</p>
         </div>
-
-        <!-- Día 2 -->
-        <div id="d2" class="day-content">
-            <div class="agenda-item" onclick="this.classList.toggle('open')">
-                <div class="agenda-header">
-                    <span class="time">10:30 AM</span>
-                    <span class="title">Workshop: Rendering for Medical Data</span>
-                    <span class="icon-arrow">▼</span>
-                </div>
-                <div class="agenda-body">
-                    <div class="details-grid">
-                        <div>
-                            <span class="detail-label">Organiza</span>
-                            <p>ACM SIGGRAPH Peru</p>
-                        </div>
-                        <div>
-                            <span class="detail-label">Temática</span>
-                            <p>Visualización de datos médicos en tiempo real con motores de juego.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Día 3 -->
-        <div id="d3" class="day-content">
-            <div class="agenda-item" onclick="this.classList.toggle('open')">
-                <div class="agenda-header">
-                    <span class="time">09:00 AM</span>
-                    <span class="title">SIPAIM Dinner Reception</span>
-                    <span class="icon-arrow">▼</span>
-                </div>
-                <div class="agenda-body">
-                    <p>Evento social para ponentes y asistentes VIP. Detalles de ubicación en el kit de bienvenida.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Día 4 -->
-        <div id="d4" class="day-content">
-            <div class="agenda-item" onclick="this.classList.toggle('open')">
-                <div class="agenda-header">
-                    <span class="time">09:00 AM</span>
-                    <span class="title">Panel: Adoption of Technologies</span>
-                    <span class="icon-arrow">▼</span>
-                </div>
-                <div class="agenda-body">
-                    <p>Mesa redonda sobre la adopción tecnológica en hospitales de Latinoamérica.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Día 5 -->
-        <div id="d5" class="day-content">
-            <div class="agenda-item" onclick="this.classList.toggle('open')">
-                <div class="agenda-header">
-                    <span class="time">09:00 AM</span>
-                    <span class="title">Tourístico: Museo Pachacamac</span>
-                    <span class="icon-arrow">▼</span>
-                </div>
-                <div class="agenda-body">
-                    <div class="details-grid">
-                        <div>
-                            <span class="detail-label">Actividad</span>
-                            <p>Visita guiada al Santuario Arqueológico.</p>
-                        </div>
-                        <div>
-                            <span class="detail-label">Nota</span>
-                            <p>Salida de buses desde la puerta principal de la universidad.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+      </div>
     </section>
+  </main>
 
-    <!-- ================== BOOTSTRAP ================== -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <footer>
+    <p>© 2026 SIPAIM · USIL · Información sujeta a actualización del comité organizador.</p>
+  </footer>
 
-    <!-- ================== PONENTES ================== -->
-   <section class="section bg-light-sec" id="ponentes">
-    <div class="container">
-        <h2 class="section-title text-center mb-5">Ponentes Magistrales</h2>
-
-        <!-- Ponente 1 -->
-        <div class="ponente-row">
-            <div class="ponente-img">
-                <img src="https://randomuser.me/api/portraits/men/32.jpg">
-            </div>
-            <div class="ponente-info">
-                <span class="ponente-tag" style="background:#2563eb;">Academia Medicina</span>
-                <h3>Dr. Gustavo Gonzáles</h3>
-                <p>Past-president de la Academia Peruana de Medicina. Experto en investigación biomédica.</p>
-                <a href="#" class="ponente-link">Ver trayectoria</a>
-            </div>
-        </div>
-
-        <!-- Ponente 2 -->
-        <div class="ponente-row reverse">
-            <div class="ponente-img">
-                <img src="https://randomuser.me/api/portraits/men/45.jpg">
-            </div>
-            <div class="ponente-info">
-                <span class="ponente-tag" style="background:#16a34a;">Oncología</span>
-                <h3>Dr. Brady Beltrán</h3>
-                <p>Investigador de renombre en el Hospital Rebagliati y especialista en guías de tratamiento.</p>
-                <a href="#" class="ponente-link">Google Scholar</a>
-            </div>
-        </div>
-
-        <!-- Ponente 3 -->
-        <div class="ponente-row">
-            <div class="ponente-img">
-                <img src="https://randomuser.me/api/portraits/men/65.jpg">
-            </div>
-            <div class="ponente-info">
-                <span class="ponente-tag" style="background:#f59e0b;">Investigación UPCH</span>
-                <h3>Dr. Mirko Zimic</h3>
-                <p>Vicerrector de Investigación. Liderando proyectos de innovación tecnológica en salud.</p>
-                <a href="#" class="ponente-link">Perfil UPCH</a>
-            </div>
-        </div>
-
-        <!-- Ponente 4 -->
-        <div class="ponente-row reverse">
-            <div class="ponente-img">
-                <img src="https://randomuser.me/api/portraits/women/44.jpg">
-            </div>
-            <div class="ponente-info">
-                <span class="ponente-tag" style="background:#ef4444;">CONCYTEC</span>
-                <h3>Dra. Karina Maldonado</h3>
-                <p>Subdirectora de Transferencia Tecnológica, impulsando el futuro digital del país.</p>
-                <a href="#" class="ponente-link">Perfil Gobierno</a>
-            </div>
-        </div>
-
-    </div>
-
-
-    </div>
-</section>
-
-    <!-- ================== WORKSHOPS ================== -->
-    <section class="section" id="workshops">
-        <h2 class="section-title">Inscripción a Workshops</h2>
-
-        <div class="ws-container">
-            <div class="ws-box" id="ws-nv" onclick="toggleWS('nv')">
-                <span style="font-size: 0.7rem; color: var(--accent); font-weight: 800;">NVIDIA DLI</span>
-                <h3 style="margin: 10px 0;">GenAI & Medical Imaging</h3>
-                <p style="font-size: 0.85rem; color: var(--text-muted);">Acceso a GPU Cloud y certificación oficial.</p>
-            </div>
-
-            <div class="ws-box" id="ws-acm" onclick="toggleWS('acm')">
-                <span style="font-size: 0.7rem; color: var(--accent); font-weight: 800;">ACM SIGGRAPH</span>
-                <h3 style="margin: 10px 0;">DICOM Visualization</h3>
-                <p style="font-size: 0.85rem; color: var(--text-muted);">Manejo de estándares médicos con Python. Ponente: Luis Valdivia.</p>
-            </div>
-        </div>
-
-        <div class="reg-summary">
-            <h4>Confirmación de Selección</h4>
-            <p id="sum-text" style="margin: 10px 0;">No has seleccionado talleres aún.</p>
-            <button id="btn-reg" class="btn-confirm" onclick="alert('Registro completado exitosamente.')">
-                Inscribirme ahora
-            </button>
-        </div>
-    </section>
-
-    <!-- ================== TURISMO ================== -->
-    <section class="section bg-light-sec" id="turismo">
-        <h2 class="section-title">Actividad Cultural</h2>
-
-        <div class="turismo-box">
-            <div>
-                <h3>Museo de Sitio Pachacamac</h3>
-                <p>Visita guiada al oráculo prehispánico más importante de la costa. Una experiencia histórica exclusiva para los asistentes de SIPAIM 2026.</p>
-
-                <br>
-
-                <div class="price-highlight">
-                    <span style="color: #b45309; font-weight: 800; font-size: 0.8rem;">ESTUDIANTES (C/ ID)</span><br>
-                    <strong style="font-size: 2.2rem; color: var(--primary);">S/ 5.00</strong>
-                </div>
-            </div>
-
-            <table style="width: 100%; border-collapse: collapse; margin-top: 15px;">
-                <tr style="border-bottom: 1px solid #e2e8f0;">
-                    <td style="padding: 15px 0;"><strong>Entrada General Adulto</strong></td>
-                    <td style="text-align: right;">S/ 15.00</td>
-                </tr>
-                <tr style="border-bottom: 1px solid #e2e8f0;">
-                    <td style="padding: 15px 0;"><strong>Servicio de Guía (Grupo)</strong></td>
-                    <td style="text-align: right;">S/ 50.00</td>
-                </tr>
-                <tr style="border-bottom: 1px solid #e2e8f0;">
-                    <td style="padding: 15px 0;"><strong>Horario Mar-Sáb</strong></td>
-                    <td style="text-align: right;">9:00 AM - 5:00 PM</td>
-                </tr>
-                <tr style="border-bottom: 1px solid #e2e8f0;">
-                    <td style="padding: 15px 0;"><strong>Horario Domingo</strong></td>
-                    <td style="text-align: right;">9:00 AM - 4:00 PM</td>
-                </tr>
-            </table>
-        </div>
-    </section>
-
-    <!-- ================== FOOTER ================== -->
-    <footer>
-        <p>© 2026 SIPAIM - Facultad de Ingeniería y Sistemas</p>
-    </footer>
-
-    <!-- ================== SCRIPTS ================== -->
-    <script src="index.js"></script>
-
+  <script src="index.js"></script>
 </body>
 </html>
